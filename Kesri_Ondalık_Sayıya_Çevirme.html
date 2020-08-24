@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+input[type=text] {
+
+border: 2px solid DeepSkyBlue;
+
+border-radius: 5pt;
+
+padding:3pt;
+
+width:30pt;
+}
+
+#Kesrin_Tamı{
+	
+margin-left:40pt;
+	
+}
+
+#Kullanici_Ust_Kesir{
+	
+margin-right:50pt;
+	
+}
+
+#Kullanici_Alt_Kesir{
+	
+margin-right:50pt;
+
+margin-bottom:3pt;
+	
+}
+
+hr{
+
+background-color:#330033;
+
+width:36pt;	
+
+padding:1px;
+
+margin-right:120pt;
+
+margin-bottom:1pt;
+
+margin-top:1pt;
+}
+
+input[type=button]{ 
+
+background-color: #0180ff;
+
+border: 2pt solid white;
+
+color: white;
+
+border-radius: 4pt;
+
+padding: 4pt 10pt;
+
+cursor: pointer;
+
+margin-left:40pt;
+
+}
+</style>
+<script>
+function Kesir_Ondalik_Sayi_Islemleri()
+{
+	var tam = Number(document.getElementById("Kesrin_Tamı").value);
+	var pay = Number(document.getElementById("Kullanici_Ust_Kesir").value);
+	var payda = Number(document.getElementById("Kullanici_Alt_Kesir").value);
+	if(tam == "" && pay == "" && payda == "")
+	{
+		return again;
+	}
+	var sonuc = tam + (pay/payda);
+	document.getElementById("yazdir").innerHTML = sonuc;	
+}
+</script>
+</head>
+<body>
+<form>
+	<table>
+		<tr>
+			<td colspan="2"><font size ="5" color="#330033">Kesri Ondalık Sayıya Çevirme</font><br><br></td>
+		</tr>       
+        <tr>
+        	<td rowspan="4"><input type="text" id ="Kesrin_Tamı"/></td>
+        </tr>
+        <tr>
+            <tr>
+                <tr>
+                    <td>
+                        <input type="text" id ="Kullanici_Ust_Kesir"/>
+                        <hr></hr>
+                        <input type="text" id ="Kullanici_Alt_Kesir"/>
+                    </td>           
+                </tr>
+            </tr>
+        </tr>
+        <tr>
+           	<td colspan="2"><br><input type="button" onclick="Kesir_Ondalik_Sayi_Islemleri()" value="Hesapla"/></td>
+        </tr>      
+        <tr>
+			<td colspan="2"><p id = "yazdir"></p></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

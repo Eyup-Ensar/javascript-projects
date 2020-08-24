@@ -1,0 +1,117 @@
+.directsFlex {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+#directorTable {
+    margin-left: 30px;
+}
+
+#TitleDiv {
+    width: 86%;
+}
+
+th {
+    border: solid 1px rgb(189, 189, 189);
+    width: 180px;
+    border-radius: 2px;
+    text-align: left;
+    padding: 0px 15px;
+    line-height: 35px;
+}
+
+#imageTh {
+    width: 170px;
+}
+
+#instructorTh {
+    width: 100px;
+}
+
+#deleteTh {
+    width: 70px;
+}
+
+.createTd {
+    height: 130px;
+    background-color: rgb(214, 214, 214);
+    padding: 0px 20px;
+}
+
+.createImage {
+    padding: 0;
+    text-align: center;
+}
+
+#table td {
+    word-break: break-all;
+    /*table'da alt satıra inme*/
+}
+
+input[type=text] {
+    width: 430px;
+    border: solid 1px rgb(189, 189, 189);
+    border-radius: 3px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+#h1 {
+    padding: 0px 20px;
+}
+
+input[type=submit] {
+    background-color: rgb(41, 113, 172);
+    padding: 6px 18px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.4s;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(24, 90, 145);
+}
+
+#createDeleteBtn {
+    background-color: rgb(197, 19, 19);
+    color: white;
+    border: 1px transparent solid;
+    border-radius: 3px;
+    outline: none;
+    transition: 0.4s;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#createDeleteBtn:hover {
+    background-color: rgb(167, 15, 15);
+}
+
+
+/* alert message */
+
+.alert {
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.alert-Warning {
+    background-color: rgb(236, 216, 228);
+}
+
+.alert-succes {
+    background-color: rgb(173, 221, 197);
+}
+
+.alert-danger {
+    background-color: rgb(240, 232, 167);
+}

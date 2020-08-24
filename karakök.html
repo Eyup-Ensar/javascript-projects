@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+input[type=text] {
+	
+border: 2px solid DeepSkyBlue;	
+
+border-radius: 6px;  
+ 
+padding:4px;
+}
+
+input[type=button]{ 
+
+background-color: #0180ff;
+	
+border: 2px solid white;	
+
+color: white;	
+
+border-radius: 5px;	
+
+padding: 6px 34px;
+
+cursor: pointer;
+
+}
+</style>
+<script>
+function Tüm_Karakök_Islemleri()
+{
+	again:
+	var girilen_sayi = document.getElementById("kullanici_sayisi").value;
+	if(girilen_sayi >= 0)
+	{
+		if(girilen_sayi == "")
+		{
+			return again;
+		}
+		var sayac = 0;
+		var i = 2;
+		for(;i < girilen_sayi;i++)
+		{
+			if(girilen_sayi % i == 0)
+			{
+				sayac++;
+			}		
+		}
+		if(sayac == 0)
+		{
+			document.getElementById("yazdir").innerHTML = "√" + girilen_sayi;	
+		}
+		else 
+		{
+			var kok_bul = Math.sqrt(girilen_sayi);
+			var kok = parseInt(kok_bul);
+			var tamkare = kok * kok;
+			if(tamkare == girilen_sayi)
+			{
+				document.getElementById("yazdir").innerHTML=kok;
+			}
+			else
+			{	
+				var carpan = 2;
+				var carpan_tk;
+				for(;carpan < girilen_sayi;carpan++)
+				{
+					if(girilen_sayi % carpan == 0)
+					{
+						carpan_tk = carpan * carpan;
+						var carpan_bln = 2;
+						var carpan_bln_tk;
+						for(;carpan_bln <= carpan;carpan_bln++)
+						{
+							if(carpan % carpan_bln == 0)
+							{
+								if(carpan_bln != carpan_tk)
+								{
+									document.getElementById("yazdir").innerHTML = "√" + girilen_sayi;
+								}
+							}
+						}
+					}	
+				}			
+				var bolenler = 2;
+				for(;bolenler < girilen_sayi;bolenler++)
+				{
+					if(girilen_sayi % bolenler == 0)
+					{
+						var tk;
+						var tb = 1;
+						for(;tb <= girilen_sayi;tb++)
+						{
+							tk = tb * tb;	
+							if(girilen_sayi / 2 >= tk)
+							{
+								if(tk == bolenler)
+								{
+									var kok_sayisi = girilen_sayi / tk;
+									document.getElementById("yazdir").innerHTML = tb + "√" + kok_sayisi;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		document.getElementById("yazdir").innerHTML = "Negatif Sayıların Karakökü Yoktur.";
+	}
+}
+</script>
+</head>
+<body>
+<form>
+	<table>
+		<tr>
+			<td colspan="2"><font size ="5" color="#330033">Sayıyı Kök Dışına Çıkarma</font><br><br></td>
+		</tr>
+        <tr>
+        	<td><b>Sayıyı Girin</b></td>
+        </tr>	
+        <tr>
+            <td><input type="text" id ="kullanici_sayisi"/></td>           
+        </tr>
+        <tr>
+            <td><br><input type="button" onclick="Tüm_Karakök_Islemleri()" value="Hesapla"/></td>
+        </tr>
+        <tr>
+			<td><p id = "yazdir"></p></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

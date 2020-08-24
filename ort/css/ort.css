@@ -1,0 +1,147 @@
+.solidblockmenu {
+    text-align: center;
+}
+
+.yazdir {
+    font-size: 19px;
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: #330033;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+#belirtec {
+    margin-left: 35%;
+    width: 367px;
+    font-size: 19px;
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    text-decoration: underline;
+    border: 3px solid black;
+    height: 80px;
+}
+
+form {
+    width: 367px;
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    width: 70px;
+    padding: 3px;
+}
+
+input[type=text]:focus {
+    outline: solid 2px black;
+}
+
+
+/*input[type=button] {
+   cursor: pointer;
+   background: transparent;
+   border-color: black;
+   color: #330033;
+   background: transparent;
+   font-size: 19px;
+   width: 95px;
+   border-radius: 6px;
+   outline: none;
+}*/
+
+input[type=reset] {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 19px;
+    transition: all 0.5s ease;
+    padding: 0px 0px;
+}
+
+.btn-reset:hover input[type=reset] {
+    color: rgb(201, 201, 201);
+}
+
+table {
+    background-color: rgb(236, 234, 234);
+    border: none;
+    font-family: "Comic Sans MS", cursive;
+    color: #330033;
+    text-align: center;
+    width: 367px;
+}
+
+.reset {
+    bottom: 3px;
+}
+
+#table {
+    box-shadow: 0px 0px 45px rgb(236, 234, 234);
+}
+
+#table_2 {
+    box-shadow: 0px 10px 50px rgb(236, 234, 234);
+}
+
+td {
+    border-right: 3px solid #330033;
+    border-bottom: 3px solid #330033;
+    border-color: black;
+    font-size: 15px;
+}
+
+#size_color {
+    font-size: 19px;
+    color: #330033;
+}
+
+select {
+    padding: 4px;
+    border: none;
+    color: #330033;
+    background: rgb(236, 234, 234);
+    outline: none;
+}
+
+select:focus {
+    outline: solid black 2px;
+}
+
+#sc_ders_sayisi {
+    font-size: 19px;
+    color: #330033;
+    text-align: inherit;
+}
+
+.tdyazdir {
+    border-right: none;
+}
+
+.left {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.footer {
+    margin-left: 73px;
+}
+
+.btn-hesap {
+    margin-right: 20px;
+    bottom: 1px;
+}
+
+.btn-reset {
+    bottom: 1px;
+}
+
+.yon {
+    margin-left: 36%;
+}

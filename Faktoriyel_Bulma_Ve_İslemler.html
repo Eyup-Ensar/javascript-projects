@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#cikarma_islemi{
+margin:0px 0px;		
+}
+#carpma_islemi{	
+margin:0px 0px;	
+}
+#toplama_islemi{	
+margin-bottom:0px;		
+}
+#bolme_islemi{
+margin:0px 0px;	
+}
+input[type=text]{	
+border-radius:3px; 
+padding:4px;	
+}
+</style>
+<script>
+function faktoriyel_bul_1()
+{
+	var sayi = document.getElementById("ilk_islem").value;
+	var faktoriyel = 1;
+	var i = 1;
+	for(i; i<=sayi;i++){
+		faktoriyel = faktoriyel * i;
+		var sekillendir = document.getElementById("faktoriyel").innerHTML = "<b>(" + sayi + "!" + ")" + " = " + faktoriyel+"</b>";
+		document.getElementById("faktoriyel").style.color = "#3c3c3c";
+	}
+}
+setInterval(faktoriyel_bul_1,1);
+
+function Tüm_Toplam()
+{
+	var sayi = document.getElementById("islemler_fkt_1").value;
+	var faktoriyel = 1;
+	var i = 1;
+	for(i; i<=sayi;i++)
+	{
+		faktoriyel = faktoriyel * i;
+	}
+	var sayi_2 = document.getElementById("islemler_fkt_2").value;
+	var faktoriyel_2 = 1;
+	var y = 1;
+	for(y; y<=sayi_2;y++){
+		faktoriyel_2 = faktoriyel_2 * y;
+	}
+	toplam = faktoriyel + faktoriyel_2;
+	document.getElementById("toplama_islemi").innerHTML=
+	"<b>("+sayi+"!"+" + "+sayi_2+"!"+")"+"  =  "+faktoriyel+"  +  "+faktoriyel_2+"  =  "+toplam+"</b>"; 
+	document.getElementById("toplama_islemi").style.color = "#3c3c3c";
+}
+setInterval(Tüm_Toplam,1);
+
+function Tüm_Cikarma()
+{		
+	var sayi = document.getElementById("islemler_fkt_1").value;
+	var faktoriyel = 1;
+	var i = 1;
+	for(i; i<=sayi;i++)
+	{
+		faktoriyel = faktoriyel * i;
+	}	
+	var sayi_2 = document.getElementById("islemler_fkt_2").value;
+	var faktoriyel_2 = 1;
+	var y = 1;
+	for(y; y<=sayi_2;y++)
+	{
+		faktoriyel_2 = faktoriyel_2 * y;
+	}
+	cikarma = faktoriyel - faktoriyel_2;
+	document.getElementById("cikarma_islemi").innerHTML=
+	"<b>("+sayi+"!"+" - "+sayi_2+"!"+")"+"  =  "+faktoriyel+"  -  "+faktoriyel_2+"  =  "+cikarma+"</b>";
+	document.getElementById("cikarma_islemi").style.color = "#3c3c3c";
+}
+setInterval(Tüm_Cikarma,1);
+
+function Tüm_Carpma()
+{		
+	var sayi = document.getElementById("islemler_fkt_1").value;
+	var faktoriyel = 1;
+	var i = 1;
+	for(i; i<=sayi;i++)
+	{
+		faktoriyel = faktoriyel * i;
+	}
+	var sayi_2 = document.getElementById("islemler_fkt_2").value;
+	var faktoriyel_2 = 1;
+	var y = 1;
+	for(y; y<=sayi_2;y++)
+	{
+		faktoriyel_2 = faktoriyel_2 * y;
+	}
+	carpma = faktoriyel * faktoriyel_2;
+	document.getElementById("carpma_islemi").innerHTML=
+	"<b>("+sayi+"!"+" x "+sayi_2+"!"+")"+"  =  "+faktoriyel+"  x  "+faktoriyel_2+"  =  "+carpma+"</b>";
+	document.getElementById("carpma_islemi").style.color = "#3c3c3c";
+}
+setInterval(Tüm_Carpma,1);
+
+function Tüm_Bolme()
+{
+	var sayi = document.getElementById("islemler_fkt_1").value;
+	var faktoriyel = 1;
+	var i = 1;
+	for(i; i<=sayi;i++)
+	{
+		faktoriyel = faktoriyel * i;
+	}
+	var sayi_2 = document.getElementById("islemler_fkt_2").value;
+	var faktoriyel_2 = 1;
+	var y = 1;
+	for(y; y<=sayi_2;y++)
+	{
+		faktoriyel_2 = faktoriyel_2 * y;
+	}
+	bolme = faktoriyel / faktoriyel_2;
+	document.getElementById("bolme_islemi").innerHTML=
+	"<b>(" + sayi + "!" + " / " + sayi_2 + "!" + ")" + "  =  " + faktoriyel + "  /  " + faktoriyel_2 + "  =  "+bolme+"</b>";
+	document.getElementById("bolme_islemi").style.color = "#3c3c3c";
+}
+setInterval(Tüm_Bolme,1);
+
+</script>
+</head>
+<body> 
+    <form>
+        <table height="100" width = "420">
+            <tr>
+                <td colspan = "2" bgcolor="#C0C0C0"><font face = "arial">Faktoriyel</font></td>
+            </tr>
+            <tr>
+                <td><font face = "arial">Sayı</font></td>
+                <td width = "1"><input type = "text" id = "ilk_islem" maxlength="4"/></td>
+            </tr>
+            <tr>
+                <td colspan = "2"><p id = "faktoriyel"></p></td>
+            </tr>
+            <tr>
+                <td colspan = "2" bgcolor="#C0C0C0"><font face = "arial">Faktoriyel İle 4 İşlem</font></td>
+            </tr>
+            <tr>
+                <td><font face = "arial">1.Sayı</font></td>
+                <td><input type = "text" id = "islemler_fkt_1" maxlength="5"/></td>
+            </tr>
+            <tr>
+                <td><font face = "arial">2.Sayı</font></td>
+                <td><input type = "text" id = "islemler_fkt_2" maxlength="5"/></td>
+            </tr>
+        </table> 
+        <table>
+            <tr>
+                <td><p id = "toplama_islemi"></p></td>
+            </tr> 
+            <tr>
+                <td><p id = "cikarma_islemi"></p></td>
+            </tr> 
+            <tr>
+                <td><p id = "carpma_islemi"></p></td>
+            </tr> 
+            <tr>
+                <td><p id = "bolme_islemi"></p></td>
+            </tr>                   
+        </table>  
+    </form>
+</body>
+</html>

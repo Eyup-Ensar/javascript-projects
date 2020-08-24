@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cours.css" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="directsFlex">
+        <div id="TitleDiv">
+            <h1 id="h1">Console App</h1>
+            <hr>
+        </div>
+        <div class="directorForm">
+            <div id="singleForm">
+                <form id="form">
+                    <table>
+                        <div id="FormTop">
+                            <tr>
+                                <td>Course title</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="courseTitle"></td>
+                            </tr>
+                        </div>
+                        <div id="FormCenter">
+                            <tr>
+                                <td>İnstructor</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="instructor"></td>
+                            </tr>
+                        </div>
+                        <div id="FormBottom">
+                            <tr>
+                                <td>İmage</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="image"></td>
+                            </tr>
+                        </div>
+                        <div id="FormButton">
+                            <tr>
+                                <td><input type="submit" id="btn" value="Save"></td>
+                            </tr>
+                        </div>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div id="directorTable">
+            <table id="table">
+                <thead id="thead">
+                    <th id="imageTh">Image</th>
+                    <th>Title</th>
+                    <th id="instructorTh">Instructor</th>
+                    <th id="deleteTh"></th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="coursEs6.js"></script>
+</body>
+
+</html>

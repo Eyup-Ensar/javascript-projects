@@ -1,0 +1,59 @@
+.upplication {
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+}
+
+.say,
+.btn,
+.quest {
+    display: none;
+}
+
+.q1-question,
+.q1-sayac,
+.q1-btn {
+    display: block;
+}
+
+.title {
+    line-height: 30px;
+    background-color: rgb(233, 233, 233);
+    padding: 2px 35px;
+    border-bottom: solid 2px rgb(214, 214, 214);
+}
+
+.quests {
+    line-height: 30px;
+    padding: 10px 20px;
+}
+
+hr {
+    width: 360px;
+}
+
+.buttons {
+    line-height: 30px;
+    padding: 15px 20px;
+}
+
+.button {
+    background-color: rgb(156, 180, 231);
+    border: 1px solid rgb(94, 130, 206);
+    border-radius: 5px;
+    color: white;
+    padding: 4px 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button:hover {
+    background-color: rgb(94, 130, 206);
+}
+
+.sayac {
+    line-height: 30px;
+    background-color: rgb(233, 233, 233);
+    padding: 2px 35px;
+    border-top: solid 2px rgb(214, 214, 214);
+}

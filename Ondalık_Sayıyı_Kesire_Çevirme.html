@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+input[type=text] {
+
+border: 2px solid DeepSkyBlue;
+
+border-radius: 6px;
+	   
+padding:4px;
+}
+
+input[type=button]{ 
+
+background-color: #0180ff;
+
+border: 2px solid white;
+
+color: white;
+
+border-radius: 5px;
+
+padding: 6px 34px;
+
+cursor: pointer;
+}
+
+#yazdir_ust{
+	
+margin-left:2pt;
+	
+}
+</style>
+<script>
+basadon:
+function Ondalik_Sayi_Islemleri()
+{
+	var alinan_sayi = Number(document.getElementById("kullanici_sayisi").value);
+	var sayinin_tami = parseInt(alinan_sayi);
+	x = ((alinan_sayi*100000000) - (sayinin_tami * 100000000)) /100000000;
+	var basamak_sayisi = (x.toString().length);
+	if(basamak_sayisi == 18)
+	{
+		if(alinan_sayi >= 10)
+		{
+			i = alinan_sayi + 10;
+			var inin_tami = parseInt(i);
+			var z = ((i * 100000000) - (inin_tami * 100000000)) /100000000;
+			var ibmd = (z.toString().length);
+			if(ibmd == 18)
+			{	
+				return basadon;
+			}
+			else if(ibmd != 18)
+			{
+				document.getElementById("yazdir_ust").innerHTML = "";
+			}
+		}
+	}
+	else if(basamak_sayisi != 18)
+	{
+		var m = 1;
+		var carpım=10;
+		for(;m <= 12; m++)
+		{
+			if(m <= basamak_sayisi)
+			{
+				carpım *= 10;
+				var ust_kesir = (x * carpım) / 1000;
+			}	
+		}
+		var sayac = 10;
+		var s = 1;
+		for(;s <= 12;s++)
+		{
+			if(s <= basamak_sayisi)
+			{
+				sayac *= 10;
+				var alt_kesir = sayac / 1000;
+			}
+		}
+		var q = 1;
+		for(;q <=10000;q++)
+		{
+			if(ust_kesir % q == 0 && alt_kesir % q == 0)
+			{
+				var ust_sonuc = ust_kesir / q;
+				var alt_sonuc = alt_kesir / q;
+				document.getElementById("yazdir_ust").innerHTML = ust_sonuc;
+				document.getElementById("yazdir_alt").innerHTML = alt_sonuc; 	
+			}	
+		}
+		if(sayinin_tami == 0)
+		{
+			document.getElementById("yazdir_tam").innerHTML = "";	
+		}
+		else 
+		{
+			document.getElementById("yazdir_tam").innerHTML = sayinin_tami;
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form>
+	<table>
+		<tr>
+			<td colspan="2"><font size ="5" color="#330033">Ondalık Sayıyı Kesre Çevirme</font><br><br></td>
+		</tr>
+        <tr>
+        	<td>
+            	<b>Ondalık Sayıyı Girin</b>
+            	<br /><font size ="3" color="#330033">Nokta (.) Kullanınız !</font>
+            </td>
+        </tr>	
+        <tr>
+            <td><br /><input type="text" id ="kullanici_sayisi"/></td>           
+        </tr>
+        <tr>
+           	<td><br><input type="button" onclick="Ondalik_Sayi_Islemleri()" value="Hesapla"/></td>
+        </tr>
+	</table>
+    <table>
+        <tr>
+        	<td rowspan="4"><p id ="yazdir_tam"></p></td>
+        </tr>
+        <tr>
+            <tr>
+                <tr>
+                    <td>
+                        <p id ="yazdir_ust"></p>
+                        <hr></hr>
+                        <p id ="yazdir_alt"></p>
+                    </td>           
+                </tr>
+            </tr>
+        </tr>
+     </table>
+</form>
+</body>
+</html>

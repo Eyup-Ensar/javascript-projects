@@ -1,0 +1,220 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" http-equiv="Content-Type" content="text/html" />
+    <!---<link rel="stylesheet" type="text/css" href="css/ort_hesapla_ana.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/ort.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/fixed.css"> -->
+</head>
+
+<body>
+
+    <div id="stickymenu" class="solidblockmenu" class="yazdir_div">
+        <div class="yazdir_title">Canlı Sonuç</div>
+        <div class="yazdir">0.00</div>
+    </div>
+    <div class="yon">
+        <form>
+            <table id="table">
+                <tr>
+                    <td id="size_color">Ortak Dersler</td>
+                    <td id="size_color">Ortalama</td>
+                    <td id="size_color">Ders</td>
+                </tr>
+                <tr>
+                    <td>Türk Dili Ve Edebiyatı </td>
+                    <td>
+                        <input type="text" id="tdb" maxlength="5" class="txt" />
+                    </td>
+                    <td>
+                        <select id="sc_tdb" class="sc">
+                            <option value="5">5</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Yabancı Dil </td>
+                    <td>
+                        <input type="text" id="ing" maxlength="5" class="txt" />
+                    </td>
+                    <td>
+                        <select id="sc_ing" class="sc">
+                            <option value="2">2</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tarih </td>
+                    <td>
+                        <input type="text" id="tarih" maxlength="5" class="txt" />
+                    </td>
+                    <td>
+                        <select id="sc_tarih" class="sc">
+                            <option value="2">2</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Din Kültürü Ve Ahlak Bilgisi</td>
+                    <td>
+                        <input type="text" id="din" maxlength="5" class="txt" />
+                    </td>
+                    <td>
+                        <select id="sc_din" class="sc">
+                            <option value="2">2</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Felsefe</td>
+                    <td>
+                        <input type="text" id="felsefe" maxlength="5" class="txt" />
+                    </td>
+                    <td>
+                        <select id="sc_felsefe" class="sc">
+                            <option value="2">2</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Beden Eğitimi Ve Spor</td>
+                    <td>
+                        <input type="text" id="beden" maxlength="5" class="txt" />
+                    </td>
+                    <td>
+                        <select id="sc_beden" class="sc">
+                            <option value="2">2</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mesleki Gelişim</td>
+                    <td>
+                        <input type="text" id="mesleki_g" maxlength="5" class="txt" />
+                    </td>
+                    <td>
+                        <select id="sc_mesleki_g" class="sc">
+                            <option value="2">2</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" id="sc_ders_sayisi">
+                        <div style="margin-left: 20px;">
+                            <div class="btn" id="create">
+                                <a href="#">Oluştur</a>
+                            </div>
+                            <div style="float: left; margin-left: 10px; margin-right: 10px;">
+                                <a><img src="next.png" class="left"></a>
+                                <a>Ders</a>
+                                <a><img src="next.png" class="right"></a>
+                            </div>
+                            <!-- <input type="button" value="Oluştur" id="create" /> Yeni Ders -->
+                            <div class="btn" id="remove">
+                                <a href="#">Sil</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <td id="size_color">Diğer Dersler</td>
+                <td id="size_color">Ortalama</td>
+                <td id="size_color">Ders</td>
+                </tr>
+            </table>
+
+            <table id="table_2">
+                <tr>
+                    <td colspan="3">
+                        <div class="footer">
+                            <div class="btn btn-hesap">
+                                <a href="#">Hesapla</a>
+                            </div>
+                            <div class="btn btn-reset ">
+                                <a href="#" class="reset"> <input type="reset" value="Temizle" /></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!-- <div class="denemelik"></div> -->
+
+    <script src="js/ort.js"></script>
+    <script src="js/fixed.js"></script>
+</body>
+
+</html>
